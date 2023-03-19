@@ -28,31 +28,31 @@ const Index= ()=> {
 
   // Server-render loading state
 
-  useEffect(()=>{
+  // useEffect(()=>{
     
     
-   (async ()=>{
-    if(!token){
-      router.push("/");
-    }
-     const res = await axios({
-      method: 'post',
-      url: url,
-      headers: {}, 
-      data: {
-          token:token
+  //  (async ()=>{
+  //   if(!token){
+  //     router.push("/");
+  //   }
+  //    const res = await axios({
+  //     method: 'post',
+  //     url: url,
+  //     headers: {}, 
+  //     data: {
+  //         token:token
         
-      }
-    }); 
-    const user = res.data; 
+  //     }
+  //   }); 
+  //   const user = res.data; 
      
-    if(!user.verified){
-      router.push("/");
-    }else if(res.status == 200 ){
-     setUserData(user);
-    }
-  })()
-  },[url]);
+  //   if(!user.verified){
+  //     router.push("/");
+  //   }else if(res.status == 200 ){
+  //    setUserData(user);
+  //   }
+  // })()
+  // },[url]);
 
 
 

@@ -49,27 +49,27 @@ const Index= (req,res)=> {
 
   // Server-render loading state
 
-  useEffect(()=>{
-    (async ()=>{ const res = await axios({
-      method: 'post',
-      url: url,
-      headers: {}, 
-      data: {
-          token:token
+  // useEffect(()=>{
+  //   (async ()=>{ const res = await axios({
+  //     method: 'post',
+  //     url: url,
+  //     headers: {}, 
+  //     data: {
+  //         token:token
         
-      }
-    });        
+  //     }
+  //   });        
     
-    setUser(res.data);
+  //   setUser(res.data);
 
-    if(res.status == 200 && res.data.verified){
-      router.push("/home");
-    }else if(!res.data.verified){
-      setVerify(true);
+  //   if(res.status == 200 && res.data.verified){
+  //     router.push("/home");
+  //   }else if(!res.data.verified){
+  //     setVerify(true);
       
-    }
-  })()
-  },[url]);
+  //   }
+  // })()
+  // },[url]);
   
 
   const loginP = ()=>{
